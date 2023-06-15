@@ -1,0 +1,17 @@
+<div class="team-list">
+  <h1>Teams</h1>
+  <ul>
+    <li *ngFor="let team of teams" (click)="selectTeam(team)">
+      {{ team.Teamname }}
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="selectedTeam" class="team-details">
+  <h2>{{ selectedTeam.Teamname }} Details</h2>
+  <p><strong>ID: </strong>{{ selectedTeam._id }}</p>
+  <p><strong>Gründungsjahr: </strong>{{ selectedTeam.Gruendungsjahr }}</p>
+  <p><strong>Liga: </strong>{{ selectedTeam.Liga }}</p>
+  <p><strong>VereinsFarben: </strong>{{ selectedTeam.VereinsFarben }}</p>
+  <p><strong>Ort: </strong>{{ selectedTeam.Ort }}</p>
+</div>
